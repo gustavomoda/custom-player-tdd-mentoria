@@ -81,6 +81,7 @@ dev_dependencies:
   
   # https://pub.dev/packages/http_mock_adapter/
   http_mock_adapter: ^0.4.2
+  dart_code_metrics: ^5.6.0
  
 # The following section is specific to Flutter.
 flutter:

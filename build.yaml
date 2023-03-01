@@ -1,0 +1,35 @@
+targets:
+  $default:
+    builders:
+      freezed:
+        generate_for:
+          - lib/src/core/**.dart
+          - lib/entities/**.dart
+          - lib/models/**.dart
+          - lib/**/entities/**.dart
+          - lib/**/models/**.dart
+      json_serializable:
+        generate_for:
+          - lib/src/core/**.dart
+          - lib/entities/**.dart
+          - lib/models/**.dart
+          - lib/**/entities/**.dart
+          - lib/**/models/**.dart
+        options:
+          disallow_unrecognized_keys: false
+          explicit_to_json: true
+          include_if_null: true
+      mobx_codegen|mobx_generator:
+        generate_for:
+          - lib/src/core/**.dart
+          - lib/**/controller*/**.dart
+          - lib/controller*/**.dart
+          - lib/**/store*/**.dart
+          - lib/**/*controller.dart
+          - lib/**/*store.dart
+      injectable_generator:injectable_builder:
+        generate_for:
+          - lib/**.dart
+
+        
+

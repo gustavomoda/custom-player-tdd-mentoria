@@ -52,3 +52,10 @@ Android-key.properties
 # coverage
 coverage_test.dart
 coverage
+
+# generated files
+*.freezed.dart
+*.g.dart
+injector.config.dart
+generated
+.secrets
