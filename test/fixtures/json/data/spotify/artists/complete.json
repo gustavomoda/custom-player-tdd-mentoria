@@ -1,0 +1,25 @@
+{
+  "external_urls": {
+    "spotify": "url_test"
+  },
+  "followers": {
+    "href": "href_test",
+    "total": 20
+  },
+  "genres": ["genres_test01", "genres_test02"],
+  "artistImage": [
+    {
+      "url": "test_url_image01",
+      "height": 10,
+      "width": 20
+    },
+    {
+      "url": "test_url_image02",
+      "height": 5,
+      "width": 10
+    }
+  ],
+  "id": "artist_id_test",
+  "name": "name_test",
+  "href": "href_test02"
+}
