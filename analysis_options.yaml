@@ -5,7 +5,7 @@ linter:
   rules:
     - prefer_relative_imports
     - avoid_relative_lib_imports
-    # - avoid_dynamic_calls
+    - avoid_dynamic_calls
     - avoid_print
     - avoid_returning_null_for_future
     - avoid_type_to_string
