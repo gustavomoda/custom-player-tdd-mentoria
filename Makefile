@@ -63,3 +63,34 @@ format:
 precommit: lint test format
 	@echo "[APP] precommit"
 	
+
+#
+# Tests
+#
+test: unit_tests
+
+coverage: test  unit_tests_report
+
+unit_tests: 
+	@echo "[APP] testing ..."
+	@(fvm flutter test --coverage  $(testOptions) )
+ 
+unit_tests_generate_report: requeriments
+	@echo "[APP] Generationg Coverage report ..."
+	@(\
+		lcov --remove coverage/lcov.info \
+			"*.g.dart" \
+			"*.freezed.dart" \
+			"*/di/*" \
+			"lib/generated/*" \
+			"*/widgets/*" \
+			"*/*_screen.dart" \
+			"*/screens/**.dart" \
+			-o  coverage/lcov-cleanup.info \
+			&&\
+		genhtml coverage/lcov-cleanup.info --output=coverage \
+	)
+
+unit_tests_report: unit_tests_generate_report
+	@(open coverage/index.html)
+  
